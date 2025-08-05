@@ -21,10 +21,11 @@ const PatientRegistration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${BASE_URL}/patients`, form);
+      const res = await axios.post(`${BASE_URL}/patients`, form ,{ withCredentials: true });
       const { patient, token } = res.data;
 
       localStorage.setItem("token", token);
+
 
       setMessage(`Patient registered! ID: ${patient._id}`);
       setForm({
