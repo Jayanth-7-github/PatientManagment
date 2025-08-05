@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  origin: "https://labtes.netlify.app/" ,
+  origin: "https://labtes.netlify.app" ,
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"]
 
