@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3211/api";
+const BASE_URL = "https://skvap-patientmanagment.onrender.com/api";
 
 const Login = ({ onLogin }) => {
   const [patientId, setPatientId] = useState("");

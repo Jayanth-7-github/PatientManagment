@@ -133,5 +133,5 @@ A full-stack web application for registering patients, managing lab tests, booki
 
 
 ## Deployed Links
-* https://labtes.netlify.app/
-* 
+* https://labtes.netlify.app/ -- Frontend
+* https://skvap-patientmanagment.onrender.com -- Backend
