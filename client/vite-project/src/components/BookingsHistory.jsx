@@ -11,9 +11,10 @@ const BookingsHistory = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(`${BASE_URL}/bookings`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          withCredentials: true,
+          // headers: {
+          //   Authorization: `Bearer ${token}`,
+          // },
         });
         setBookings(res.data);
       } catch {
