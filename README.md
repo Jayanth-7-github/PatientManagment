@@ -132,4 +132,6 @@ A full-stack web application for registering patients, managing lab tests, booki
 * If the patient wants to download the pdf again they have to use patientId to login so they should secure the  patientId
 
 
-
+## Deployed Links
+* https://labtes.netlify.app/
+* 
