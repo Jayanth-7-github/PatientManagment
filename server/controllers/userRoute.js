@@ -35,8 +35,8 @@ router.post("/patients", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure:false, 
-      sameSite:"lax"
+      secure:true,
+      sameSite:"None"
     });
 
     // Send patient + token
@@ -144,8 +144,8 @@ router.post("/login", async (req, res) => {
     });
       res.cookie("token", token, {
       httpOnly: true,
-      secure:false, 
-      sameSite:"lax"
+      secure:true, 
+      sameSite:"None"
     });
 
     res.status(200).json({ token, patient });
