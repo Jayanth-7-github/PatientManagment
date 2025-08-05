@@ -9,7 +9,7 @@ const Login = ({ onLogin }) => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(`${BASE_URL}/login`, { patientId });
+      const res = await axios.post(`${BASE_URL}/login`, { patientId }, { withCredentials: true });
       localStorage.setItem("token", res.data.token);
       onLogin && onLogin(res.data.patient);
       setError("");
