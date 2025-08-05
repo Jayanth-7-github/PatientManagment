@@ -33,6 +33,12 @@ router.post("/patients", async (req, res) => {
       expiresIn: "1h",
     });
 
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure:false, 
+      sameSite:"lax"
+    });
+
     // Send patient + token
     res.status(201).json({ patient, token });
   } catch (error) {
@@ -135,6 +141,11 @@ router.post("/login", async (req, res) => {
 
     const token = jwt.sign({ id: patient._id }, process.env.JWT_SECRET, {
       expiresIn: "30d", // Token valid for 30 days
+    });
+      res.cookie("token", token, {
+      httpOnly: true,
+      secure:false, 
+      sameSite:"lax"
     });
 
     res.status(200).json({ token, patient });
